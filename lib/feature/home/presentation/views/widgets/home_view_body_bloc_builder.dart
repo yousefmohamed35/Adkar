@@ -1,5 +1,6 @@
 import 'package:adkar/feature/home/presentation/views/widgets/animated_counter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../manager/counter_cubit.dart';
 import 'custom_button.dart';
@@ -44,6 +45,7 @@ class HomeViewBodyBlocBuilder extends StatelessWidget {
                   text: 'إعادة',
                   color: const Color.fromARGB(157, 52, 59, 163),
                   onPressed: () {
+                    HapticFeedback.vibrate();
                     cubit.resetValue();
                   },
                 ),
