@@ -54,6 +54,7 @@ class _AnimatedCounterState extends State<AnimatedCounter>
         text: convertToArabicNumbers(widget.count.toString()),
         width: 120,
         hight: 110,
+        size: 28,
       ),
     );
   }

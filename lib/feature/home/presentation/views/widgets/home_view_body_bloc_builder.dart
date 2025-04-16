@@ -42,7 +42,7 @@ class HomeViewBodyBlocBuilder extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 CustomButton(
-                  text: 'إعادة',
+                  text: 'إِعَادَة',
                   color: const Color.fromARGB(157, 52, 59, 163),
                   onPressed: () {
                     HapticFeedback.vibrate();

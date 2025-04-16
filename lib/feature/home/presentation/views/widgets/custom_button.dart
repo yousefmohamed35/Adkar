@@ -9,13 +9,14 @@ class CustomButton extends StatelessWidget {
     this.width,
     this.hight,
     this.onPressed,
-    this.color,
+    this.color, this.size,
   });
   final String text;
   final double? width;
   final double? hight;
   final void Function()? onPressed;
   final Color? color;
+  final double? size;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -25,7 +26,7 @@ class CustomButton extends StatelessWidget {
         fixedSize: Size(width ?? 100, hight ?? 90),
       ),
       onPressed: onPressed,
-      child: CustomText(text: text),
+      child: CustomText(text: text,size: size,),
     );
   }
 }
