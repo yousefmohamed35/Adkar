@@ -29,9 +29,9 @@ class HomeView extends StatelessWidget {
                 text:
                     'وَإِنْ مِنْ شَيْءٍ إِلَّا يُسَبِّحُ بِحَمْدِهِ وَلَٰكِنْ لَا تَفْقَهُونَ تَسْبِيحَهُمْ ﴿٤٤ الإسراء﴾',
               ),
-              SizedBox(height: 100),
+              SizedBox(height: 80),
               CustomButton(text: '0', width: 120, hight: 110),
-              SizedBox(height: 20),
+              SizedBox(height: 30),
               Row(
                 children: [
                   CustomButton(text: 'سَبِّحْ', width: 150, hight: 140),
