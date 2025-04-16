@@ -1,7 +1,9 @@
+import 'package:adkar/core/service_locator.dart';
 import 'package:adkar/feature/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  setupServiceLocator();
   runApp(const AdkharApp());
 }
 
