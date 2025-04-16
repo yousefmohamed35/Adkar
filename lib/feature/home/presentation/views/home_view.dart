@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'widgets/custom_button.dart';
 import 'widgets/custom_container.dart';
 
 class HomeView extends StatelessWidget {
@@ -17,11 +17,20 @@ class HomeView extends StatelessWidget {
               text:
                   'وَإِنْ مِنْ شَيْءٍ إِلَّا يُسَبِّحُ بِحَمْدِهِ وَلَٰكِنْ لَا تَفْقَهُونَ تَسْبِيحَهُمْ ﴿٤٤ الإسراء﴾',
             ),
+            SizedBox(height: 100),
+            CustomButton(text: '0', width: 120, hight: 110),
             SizedBox(height: 20),
-                    ],
+            Row(
+              children: [CustomButton(text: 'سَبِّحْ', width: 150, hight: 140)],
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [CustomButton(text: 'إعادة')],
+            ),
+          ],
         ),
       ),
     );
   }
 }
-
