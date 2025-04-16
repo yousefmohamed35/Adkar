@@ -1,7 +1,6 @@
-import 'package:adkar/core/convert_to_arabic.dart';
+import 'package:adkar/feature/home/presentation/views/widgets/animated_counter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../manager/counter_cubit.dart';
 import 'custom_button.dart';
 import 'custom_container.dart';
@@ -23,11 +22,7 @@ class HomeViewBodyBlocBuilder extends StatelessWidget {
                   'وَإِنْ مِنْ شَيْءٍ إِلَّا يُسَبِّحُ بِحَمْدِهِ وَلَٰكِنْ لَا تَفْقَهُونَ تَسْبِيحَهُمْ ﴿٤٤ الإسراء﴾',
             ),
             SizedBox(height: 80),
-            CustomButton(
-              text: convertToArabicNumbers(state.toString()),
-              width: 120,
-              hight: 110,
-            ),
+            AnimatedCounter(count: state),
             SizedBox(height: 30),
             Row(
               children: [
