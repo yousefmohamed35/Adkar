@@ -7,16 +7,14 @@ import 'custom_button.dart';
 import 'custom_container.dart';
 
 class HomeViewBodyBlocBuilder extends StatelessWidget {
-  const HomeViewBodyBlocBuilder({
-    super.key,
-  });
+  const HomeViewBodyBlocBuilder({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<CounterCubit, int>(
       builder: (context, state) {
         var cubit = context.read<CounterCubit>();
-        
+
         return Column(
           children: [
             SizedBox(height: 100),
@@ -43,12 +41,13 @@ class HomeViewBodyBlocBuilder extends StatelessWidget {
                 ),
               ],
             ),
-        
+
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 CustomButton(
                   text: 'إعادة',
+                  color: const Color.fromARGB(157, 52, 59, 163),
                   onPressed: () {
                     cubit.resetValue();
                   },

@@ -12,11 +12,10 @@ class CustomContainer extends StatelessWidget {
       height: 100,
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Colors.deepPurple,
+        color: const Color.fromARGB(255, 12, 90, 100),
         borderRadius: BorderRadius.circular(20),
       ),
       child: CustomText(text: text),
     );
   }
 }
-

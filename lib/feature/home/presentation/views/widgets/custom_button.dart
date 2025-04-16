@@ -9,16 +9,18 @@ class CustomButton extends StatelessWidget {
     this.width,
     this.hight,
     this.onPressed,
+    this.color,
   });
   final String text;
   final double? width;
   final double? hight;
   final void Function()? onPressed;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: color ?? Colors.deepPurple,
         shape: CircleBorder(),
         fixedSize: Size(width ?? 100, hight ?? 90),
       ),
