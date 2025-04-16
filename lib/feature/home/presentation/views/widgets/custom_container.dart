@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'custom_text.dart';
+
 class CustomContainer extends StatelessWidget {
   const CustomContainer({super.key, required this.text});
   final String text;
@@ -18,25 +20,3 @@ class CustomContainer extends StatelessWidget {
   }
 }
 
-class CustomText extends StatelessWidget {
-  const CustomText({
-    super.key,
-    required this.text,
-  });
-
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      textDirection: TextDirection.rtl,
-      style: TextStyle(
-        color: Colors.white,
-        fontSize: 20,
-        fontWeight: FontWeight.bold,
-      ),
-      textAlign: TextAlign.center,
-    );
-  }
-}
