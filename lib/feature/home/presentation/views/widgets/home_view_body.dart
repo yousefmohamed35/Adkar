@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'home_view_body_bloc_builder.dart';
 
 class HomeViewBody extends StatelessWidget {
-  const HomeViewBody({
-    super.key,
-  });
+  const HomeViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,4 +25,3 @@ class HomeViewBody extends StatelessWidget {
     );
   }
 }
-

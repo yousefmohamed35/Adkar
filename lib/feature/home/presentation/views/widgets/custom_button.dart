@@ -9,7 +9,8 @@ class CustomButton extends StatelessWidget {
     this.width,
     this.hight,
     this.onPressed,
-    this.color, this.size,
+    this.color,
+    this.size,
   });
   final String text;
   final double? width;
@@ -26,7 +27,7 @@ class CustomButton extends StatelessWidget {
         fixedSize: Size(width ?? 100, hight ?? 90),
       ),
       onPressed: onPressed,
-      child: CustomText(text: text,size: size,),
+      child: CustomText(text: text, size: size),
     );
   }
 }
