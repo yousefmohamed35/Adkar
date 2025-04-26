@@ -1,6 +1,8 @@
 import 'package:adkar/core/database/cache/cache_helper.dart';
 import 'package:adkar/core/service_locator.dart';
 import 'package:adkar/feature/home/presentation/manager/counter_cubit.dart';
+import 'package:adkar/feature/quran/data/service/quran_service.dart';
+import 'package:adkar/feature/quran/presentation/manager/quran_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -18,12 +20,18 @@ class AdkharApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => CounterCubit(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => CounterCubit()),
+        BlocProvider(
+          create:
+              (context) => QuranCubit(getIt.get<QuranService>())..loadQuaran(),
+        ),
+      ],
       child: MaterialApp(
         theme: ThemeData(useMaterial3: true),
         debugShowCheckedModeBanner: false,
-        home: QuranView(),
+        home: Quran(),
       ),
     );
   }

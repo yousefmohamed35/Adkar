@@ -15,10 +15,9 @@ class QuranModel {
     transliteration: json['transliteration'] ,
     type: json['type'] ,
     totalVerses: json['total_verses'] ,
-    verses:
-        (json['verses'] )
-            ?.map((e) => Verse.fromJson(e as Map<String, dynamic>))
-            .toList(),
+    verses: (json['verses'] as List)
+    .map((e) => Verse.fromJson(e as Map<String, dynamic>))
+    .toList(),
   );
 
   QuranModel({required this.id, required this.name, required this.transliteration, required this.type, required this.totalVerses, required this.verses});
