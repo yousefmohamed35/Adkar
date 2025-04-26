@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 
@@ -24,7 +23,6 @@ class _QuranViewState extends State<QuranView> {
 
   @override
   void initState() {
-    // TODO: implement initState
     loadQuran();
     super.initState();
   }
@@ -38,7 +36,9 @@ class _QuranViewState extends State<QuranView> {
               : ListView.builder(
                 itemCount: jsonData!.length,
                 itemBuilder: (context, index) {
-                  return Text('${jsonData![index]['name']}');
+                  for (int i = 0; i <= jsonData![index]['total_verses'];) {
+                    return Text('${jsonData![index]['verses'][i]}');
+                  }
                 },
               ),
     );

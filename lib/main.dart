@@ -1,7 +1,6 @@
 import 'package:adkar/core/database/cache/cache_helper.dart';
 import 'package:adkar/core/service_locator.dart';
 import 'package:adkar/feature/home/presentation/manager/counter_cubit.dart';
-import 'package:adkar/feature/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
