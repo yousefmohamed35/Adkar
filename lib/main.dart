@@ -6,7 +6,7 @@ import 'package:adkar/feature/quran/presentation/manager/quran_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'feature/quran/quran.dart';
+import 'feature/quran/presentation/view/quran_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,7 +31,7 @@ class AdkharApp extends StatelessWidget {
       child: MaterialApp(
         theme: ThemeData(useMaterial3: true),
         debugShowCheckedModeBanner: false,
-        home: Quran(),
+        home: QuranView(),
       ),
     );
   }
